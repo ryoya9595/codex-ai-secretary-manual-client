@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT Codex 導入マニュアル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">ChatGPT Codex</p>
+        <h1>導入マニュアル</h1>
+        <p class="subtitle">ChatGPTのAIエージェントを使って、日々のタスクを楽にこなそう</p>
+        <p class="author">マニュアル制作者：りょうや</p>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="目次">
+      <div class="toc-inner">
+        <span class="toc-title">目次</span>
+        <a href="#notice">注意事項</a>
+        <a href="#chapter1">第1章 導入</a>
+        <a href="#chapter2">第2章 フォルダ</a>
+        <a href="#chapter3">第3章 セットアップ</a>
+        <a href="#chapter4">第4章 細かい設定</a>
+        <a href="#chapter5">第5章 立ち上げ方</a>
+        <a href="#chapter6">第6章 セキュリティ</a>
+        <a href="#chapter7">第7章 どんどん頼ろう</a>
+      </div>
+    </nav>
+
+    <main class="content">
+      <!-- 注意事項 -->
+      <section id="notice" class="block">
+        <h2>⚠️ 使用上の注意事項</h2>
+        <p>本マニュアルは、Codex（ChatGPTのAIエージェント）を導入し、日々のタスクを任せられる状態にするための手順を解説します。</p>
+        <div class="callout warn">
+          <strong>基本的な考え方</strong>
+          <p>最初はCodex専用フォルダの中だけで動かし、機密情報は触らせない。</p>
+        </div>
+        <ul>
+          <li>Codexはパソコン内のファイル作成・編集ができるAIエージェントです。設定や指示を間違えると、意図しないファイル編集や上書きが起きる可能性があります。</li>
+          <li>本マニュアルでは安全性を高めるため、最初はCodex専用フォルダの中だけで作業する前提にしています。</li>
+          <li>重要なファイル、機密情報、APIキー、パスワード、クレジットカード情報、SSH鍵などは、Codexに読ませないでください。</li>
+          <li>慣れていないうちは「フルアクセス」をオンにしないでください。</li>
+        </ul>
+        <details class="disclaimer">
+          <summary>📄 免責事項</summary>
+          <p>本マニュアルは情報提供を目的として作成されたものであり、内容の正確性・完全性・最新性を保証するものではありません。記載された手順・設定・操作等を実行したことにより生じたいかなる損害についても、作成者は一切の責任を負いません。利用はすべて利用者ご自身の判断と自己責任のもとで行ってください。OpenAIおよびCodexの仕様・料金・利用条件は予告なく変更される場合があるため、必ず公式情報をご確認ください。</p>
+        </details>
+      </section>
+
+      <!-- 第1章 -->
+      <section id="chapter1" class="block">
+        <h2>第1章　Codexを導入する</h2>
+        <p>CodexはOpenAIが提供しているAIエージェントです。ChatGPTのように質問へ答えるだけでなく、ファイル作成、資料作成、ブラウザ操作、アプリ操作など「作業そのもの」を進めてくれます。まずはアプリを入れて、お持ちのChatGPTアカウントでログインしましょう。</p>
+
+        <h3>1. Codexアプリをダウンロードする</h3>
+        <p><a class="btn-link" href="https://openai.com/codex/get-started/" target="_blank" rel="noopener noreferrer">CodexアプリのDLページはこちら</a></p>
+        <figure class="shot"><img src="images/01-download.png" alt="Codex公式のダウンロードページ" width="2898" height="1450" /><figcaption>Codex公式のダウンロードページ</figcaption></figure>
+
+        <h3>2. 起動して、お持ちのChatGPTでログインする</h3>
+        <p>ダウンロードしたアプリを起動し、普段使っているChatGPTアカウントでそのままログインします。新しくアカウントを作る必要はありません。</p>
+        <p>まだChatGPTのアカウントを作っていない方は、先にアカウントを作成しましょう。</p>
+        <p><a class="btn-link" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPTのアカウントを持っていない方はこちら</a></p>
+      </section>
+
+      <!-- 第2章 -->
+      <section id="chapter2" class="block">
+        <h2>第2章　専用フォルダを作ってCodexと結びつける</h2>
+        <p>Codexは「プロジェクト」という単位で作業フォルダを管理します。デスクトップに手動でフォルダを作らなくても、Codexの機能でフォルダごと新しく作れます。</p>
+
+        <h3>1. 新しいプロジェクトを作る</h3>
+        <p>まずはCodexの「新しいチャット」画面にて、プロジェクトの作成〜Codexへの紐づけを行います。「新しいプロジェクトを追加」→「最初から始める」を選びましょう。</p>
+        <figure class="shot"><img src="images/02-new-project.png" alt="新しいプロジェクトを追加して最初から始める" width="1018" height="570" /><figcaption>「新しいプロジェクトを追加」→「最初から始める」</figcaption></figure>
+
+        <h3>2. 名前を「Codex Agents」にして保存する</h3>
+        <p>プロジェクト名の入力欄に「<code>Codex Agents</code>」と入力して保存します。これで専用フォルダが作られ、Codexと結びついた状態になります。</p>
+        <figure class="shot"><img src="images/03-project-name.png" alt="プロジェクト名にCodex Agentsと入力" width="888" height="424" /><figcaption>プロジェクト名を「Codex Agents」にして保存</figcaption></figure>
+        <div class="callout info">
+          <p>すでにデスクトップなどに使いたいフォルダがある場合は、「既存のフォルダを使用」で開いてもOKです。ただし最初は、仕事用フォルダ全体など中身の多いフォルダを丸ごと開くのは避け、専用の新規プロジェクトから始めるのが安全です。</p>
+        </div>
+      </section>
+
+      <!-- 第3章 メイン -->
+      <section id="chapter3" class="block highlight">
+        <span class="badge">★ いちばん大事な手順</span>
+        <h2>第3章　AIにCodexのセットアップをしてもらう</h2>
+        <p>送信すると、先ほど作成したフォルダ内にCodex運用に最低限必要な仕組みが構築され、<strong>最初のスキル「my-agents」が立ち上がります。</strong></p>
+        <p>以下のプロンプトを「コピー」のボタンでコピーして、お使いのCodexのチャットに貼り付けて送信しましょう。</p>
+        <div class="callout warn">
+          <p>プロンプトを実行すると、結びつけているフォルダ内が書き換えられます。既存の重要なフォルダを結びつけている場合には使用しないようにご注意ください。</p>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-head">
+            <span>セットアップ用プロンプト</span>
+            <button type="button" id="copyPromptButton" class="copy-btn" data-target="promptBody">コピー</button>
+          </div>
+          <pre id="promptBody"></pre>
+        </div>
+
+        <h3>立ち上がったAI秘書が、こう動きます</h3>
+        <ol>
+          <li>Codex運用に最低限必要な環境を整えてくれる</li>
+          <li>あなたを知るために、いくつか質問してくる（呼び方・仕事・任せたいこと・口調）</li>
+          <li>答えると、続いて「次は何をやってみる？」とメニューを出してくれる</li>
+        </ol>
+
+        <h3>「次は何をやってみる？」のメニュー</h3>
+        <ul class="menu">
+          <li>他のスキルズの作成を進めてみる</li>
+          <li>スケジュール / todo を整理してもらう</li>
+          <li>画像を生成してみる（テスト実践）</li>
+          <li>仕事に使えるツールを作ってみる</li>
+          <li>簡単なゲームを作ってみる（PC / スマホ対応可能）</li>
+        </ul>
+        <div class="callout info">
+          <p>気になったものを選ぶだけで、Codexがそのまま進めてくれます。まずは気軽に1つ試して、AIエージェントの便利さを体感してみてください。</p>
+        </div>
+      </section>
+
+      <!-- 第4章 -->
+      <section id="chapter4" class="block">
+        <h2>第4章　細かい設定を調整する</h2>
+        <p>ここからは、Codexをより快適・安全に使うための設定を整えます。最初は下の「安全寄り」の設定にしておくと安心です。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>項目</th><th>おすすめ設定</th><th>ねらい</th></tr></thead>
+            <tbody>
+              <tr><td>権限</td><td>自動レビュー</td><td>危ない操作だけ確認してもらう</td></tr>
+              <tr class="row-flag"><td>フルアクセス</td><td>OFF</td><td>事故防止を優先する</td></tr>
+              <tr><td>サンドボックス</td><td>作業フォルダ内で作業</td><td>余計な場所を触らせない</td></tr>
+              <tr><td>コンピューター / ブラウザ使用</td><td>必要な時だけON</td><td>画面操作が必要な時だけ許可する</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout info">
+          <p>設定はあとから何度でも変えられます。まずは安全寄り（フルアクセスOFF）で始めて、慣れてきたら必要に応じて広げていきましょう。</p>
+        </div>
+      </section>
+
+      <!-- 第5章 -->
+      <section id="chapter5" class="block">
+        <h2>第5章　AI秘書の立ち上げ方</h2>
+        <p>一度セットアップすれば、今後はいつでも同じスキル名でAI秘書を呼び出せます。</p>
+        <h3>呼び出し方</h3>
+        <p>入力欄に「<code>/my</code>」を打つと候補メニューが出るので、その中から <code>my-agents</code> を選ぶだけです。文章の中で <code>$my-agents</code> と書いて呼び出すこともできます（どちらでも動きます）。</p>
+
+        <h3>使い方の例</h3>
+        <div class="example-grid">
+          <div class="example"><span class="example-tag">todo・スケジュール整理</span><code>/my-agents 今日やることは、請求書作成と動画構成チェック。優先度を整理して、午前と午後の動き方も提案して。</code></div>
+          <div class="example"><span class="example-tag">アイデア保存</span><code>/my-agents 新しい教材のアイデアを思いついた。初心者向けにCodexの安全な始め方だけを解説する特典を作りたい。メモしておいて。</code></div>
+          <div class="example"><span class="example-tag">日報作成</span><code>/my-agents 今日やったことを日報にまとめて。完了したのは動画構成、残りはサムネ案の作成。</code></div>
+          <div class="example"><span class="example-tag">次の一手を相談</span><code>/my-agents 今のtodoを見て、次に手をつけるべきものを1つ選んで。</code></div>
+        </div>
+        <div class="callout info">
+          <p>「何をどう頼めばいいか分からない」時も、そのままAI秘書に聞いてOKです。やりたいことを話せば、進め方ごと提案してくれます。</p>
+        </div>
+      </section>
+
+      <!-- 第6章 -->
+      <section id="chapter6" class="block">
+        <h2>第6章　パーソナライズでセキュリティを仕込む</h2>
+        <p>最後に、もう一段の安心を足しておきましょう。Codexの「パーソナライズ」にある<strong>『カスタム指示』は、すべてのチャットに共通で効く</strong>指示です。ここにセキュリティのルールを入れておくと、どのプロジェクトでも自動で安全ガードがかかります。</p>
+
+        <h3>1. 設定 → パーソナライズ を開く</h3>
+        <p>画面左下の「設定」を開きます。</p>
+        <figure class="shot"><img src="images/04-settings.png" alt="画面左下の設定を開く" width="2400" height="1386" /><figcaption>画面左下の「設定」を開く</figcaption></figure>
+        <p>メニューが開くので、その中の「設定」を選びます。</p>
+        <figure class="shot"><img src="images/04b-settings-menu.png" alt="メニューから設定を選ぶ" width="590" height="296" /><figcaption>メニューから「設定」を選ぶ</figcaption></figure>
+        <p>左メニューの「パーソナライズ」を選ぶと、「カスタム指示」の入力欄があります。</p>
+        <figure class="shot"><img src="images/05-personalize-custom.png" alt="パーソナライズのカスタム指示欄" width="2392" height="1390" /><figcaption>「パーソナライズ」→「カスタム指示」の入力欄</figcaption></figure>
+
+        <h3>2. カスタム指示にセキュリティ共通ルールを貼る</h3>
+        <p>「カスタム指示」の入力欄に、次の内容をコピペして保存してください。</p>
+        <div class="prompt-card">
+          <div class="prompt-head">
+            <span>カスタム指示（セキュリティ共通ルール）</span>
+            <button type="button" id="copySecurityButton" class="copy-btn" data-target="securityBody">コピー</button>
+          </div>
+          <pre id="securityBody"></pre>
+        </div>
+        <div class="callout info">
+          <p>これで「機密ファイルを触らない」「危険な操作は必ず確認する」というルールが、毎回どのチャットでも効くようになります。安心して日々の作業を任せられる土台が完成です。</p>
+        </div>
+      </section>
+
+      <!-- 第7章 締め -->
+      <section id="chapter7" class="block closing">
+        <h2>第7章　あとは、どんどんCodexに頼っていこう</h2>
+        <p>ここまでで準備は完了です。あとは難しく考えず、やりたいことをどんどんCodexに依頼していきましょう。</p>
+        <ul>
+          <li>資料を作りたい、リサーチしたい、文章を書きたい — まず頼んでみる</li>
+          <li>作業の途中で詰まったら、状況をそのまま伝えて相談する</li>
+          <li>そもそも何をしたらいいか分からない時は、「何かできることある？」と聞いてみる</li>
+        </ul>
+        <p>最初は小さなお願いからで大丈夫です。使えば使うほど、あなたの仕事の進め方をCodexが理解し、頼れる相棒になっていきます。</p>
+        <p class="closing-line">どんどん使って、毎日のタスクを軽やかに。</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>ChatGPT Codex 導入マニュアル</p>
+      <p class="muted">ラッキーマイン　あべむつき / りょうや</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
