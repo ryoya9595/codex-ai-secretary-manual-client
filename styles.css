@@ -229,16 +229,21 @@ tr.row-flag td { background: var(--yellow-bg); font-weight: 700; }
 }
 .copy-btn:hover { background: var(--light-blue); }
 .copy-btn.copied { background: #2e7d32; color: #fff; }
-pre#promptBody {
+.prompt-card pre {
   margin: 0;
   background: var(--prompt-bg);
-  padding: 18px 18px;
-  font-family: "SF Mono", "Courier New", monospace;
-  font-size: 13px;
-  line-height: 1.7;
+  padding: 16px 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
   white-space: pre-wrap;
   word-break: break-word;
   color: #2b3a4a;
+}
+pre#promptBody {
+  font-family: "SF Mono", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.7;
   max-height: 460px;
   overflow-y: auto;
 }
