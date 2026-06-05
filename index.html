@@ -27,7 +27,8 @@
         <a href="#chapter3">第3章 セットアップ</a>
         <a href="#chapter4">第4章 立ち上げ方</a>
         <a href="#chapter5">第5章 セキュリティ</a>
-        <a href="#chapter6">第6章 どんどん頼ろう</a>
+        <a href="#chapter6">第6章 ツール・ゲーム作成</a>
+        <a href="#chapter7">第7章 どんどん頼ろう</a>
       </div>
     </nav>
 
@@ -164,11 +165,72 @@
         <div class="callout info">
           <p>これで「機密ファイルを触らない」「危険な操作は必ず確認する」というルールが、毎回どのチャットでも効くようになります。安心して日々の作業を任せられる土台が完成です。</p>
         </div>
+
+        <h3>Chrome拡張機能でブラウザと連携する</h3>
+        <p>Codexの公式Chrome拡張機能を入れると、Codexが<strong>ブラウザを直接操作</strong>できるようになります（リサーチや画面操作などがよりスムーズに）。</p>
+        <p><a class="btn-link" href="https://chromewebstore.google.com/detail/codex/hehggadaopoacecdllhhajmbjkdcmajg?hl=ja" target="_blank" rel="noopener noreferrer">Codex拡張機能（Chromeウェブストア）はこちら</a></p>
+        <figure class="shot"><img src="images/11-extension.png" alt="CodexのChrome拡張機能ページ" width="2466" height="1342" /><figcaption>Chromeウェブストアの「Codex」→「Chromeに追加」</figcaption></figure>
+        <div class="callout info">
+          <p>CodexでChrome操作を活用するためには、拡張機能を導入しておきましょう。</p>
+        </div>
       </section>
 
-      <!-- 第6章 締め -->
-      <section id="chapter6" class="block closing">
-        <h2>第6章　あとは、どんどんCodexに頼っていこう</h2>
+      <!-- 第6章 ツール・ゲーム作成 -->
+      <section id="chapter6" class="block">
+        <h2>第6章　Webツールやゲームを作ってみよう</h2>
+        <p>Codexはコードも書けます。つまり、<strong>ブラウザで動くWebツールやゲームも、Codexに作ってもらえます。</strong>「あったらいいな」を、その場で形にできるのがCodexの一番楽しいところです。</p>
+
+        <h3>実際にCodexで作った例</h3>
+        <p>下はどちらもCodexに作ってもらったもの。仕事ツールから本格的なゲームまで、こんなものが作れます。</p>
+        <figure class="shot"><img src="images/12-tool-example.png" alt="Codexで作った見積書・請求書ツール" width="2672" height="1470" /><figcaption>仕事ツールの例：見積書・請求書 自動生成ツール</figcaption></figure>
+        <figure class="shot"><img src="images/13-game-title.png" alt="Codexで作ったキリンのゲーム タイトル画面" width="2792" height="1440" /><figcaption>ゲームの例：3Dランニングゲーム「キリンランド」</figcaption></figure>
+        <figure class="shot"><img src="images/14-game-play.png" alt="キリンのゲーム プレイ画面" width="2628" height="1362" /><figcaption>ちゃんと遊べるゲームになります</figcaption></figure>
+
+        <h3>① まずは“ざっくり”作ってもらう</h3>
+        <p>難しく考えず、まずはこのくらい簡単な一言でOK。下のどれかをコピペして送るだけで、Codexが作って、すぐ使える／遊べる形にしてくれます。</p>
+
+        <h4 class="prompt-group-label">🛠 ツールを作る</h4>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>ポモドーロタイマー</span><button type="button" class="copy-btn" data-target="promptPomodoro">コピー</button></div>
+          <pre id="promptPomodoro"></pre>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>割り勘計算ツール</span><button type="button" class="copy-btn" data-target="promptWarikan">コピー</button></div>
+          <pre id="promptWarikan"></pre>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>ToDoリスト</span><button type="button" class="copy-btn" data-target="promptTodo">コピー</button></div>
+          <pre id="promptTodo"></pre>
+        </div>
+
+        <h4 class="prompt-group-label">🎮 ゲームを作る</h4>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>スーパーマリオ風ゲーム</span><button type="button" class="copy-btn" data-target="promptMario">コピー</button></div>
+          <pre id="promptMario"></pre>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>ブロック崩し</span><button type="button" class="copy-btn" data-target="promptBlock">コピー</button></div>
+          <pre id="promptBlock"></pre>
+        </div>
+
+        <h3>② 動いたら“追加の注文”でクオリティを上げる</h3>
+        <p>ここがCodexの楽しいところ。一度できたものに、こんなふうに追加で注文するだけで、どんどん良くなっていきます。</p>
+        <ul class="menu">
+          <li>「2段ジャンプもできるようにして」</li>
+          <li>「もっと難易度を上げて、敵を増やして」</li>
+          <li>「キャラクターを可愛い動物にして」</li>
+          <li>「スマホでも遊べるように、タッチ操作を付けて」</li>
+          <li>「BGMと効果音を付けて」</li>
+          <li>「スコアのランキングを保存できるようにして」</li>
+        </ul>
+        <div class="callout info">
+          <p>完璧を狙わず、<strong>まず動かす → 遊んでみる →「ここをこうして」と注文</strong>。この繰り返しで、あなただけのツールやゲームが完成します。慣れたら、公開してURLで配ることもできます。</p>
+        </div>
+      </section>
+
+      <!-- 第7章 締め -->
+      <section id="chapter7" class="block closing">
+        <h2>第7章　あとは、どんどんCodexに頼っていこう</h2>
         <p>ここまでで準備は完了です。あとは難しく考えず、やりたいことをどんどんCodexに依頼していきましょう。</p>
         <ul>
           <li>資料を作りたい、リサーチしたい、文章を書きたい — まず頼んでみる</li>
